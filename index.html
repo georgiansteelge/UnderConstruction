@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Georgian Steel - Coming soon">
+    <meta name="theme-color" content="#f5f5f5">
+    <title>Georgian Steel - Under Construction</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231f2937'/><path d='M8 12h16v2H8zm0 4h16v2H8zm0 4h16v2H8z' fill='%23f97316'/></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #f97316;
+            --primary-dark: #ea580c;
+            --light-bg: #f5f5f5;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --text-lighter: #9ca3af;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Language Selector */
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 6px;
+            background: white;
+            padding: 6px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+        }
+
+        .lang-btn {
+            padding: 8px 14px;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            background: transparent;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+        }
+
+        .lang-btn:hover {
+            background: var(--light-bg);
+        }
+
+        .lang-btn:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 28px;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            padding: 48px 32px;
+            animation: fadeInScale 0.6s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            animation: float 3.5s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .contact {
+            font-size: 13px;
+            color: var(--text-lighter);
+            margin-bottom: 32px;
+        }
+
+        .contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .notify-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+            letter-spacing: 0.3px;
+        }
+
+        .notify-btn:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 6px 16px rgba(249, 115, 22, 0.35);
+            transform: translateY(-1px);
+        }
+
+        .notify-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(249, 115, 22, 0.2);
+        }
+
+        .notify-btn:focus-visible {
+            outline: 2px solid var(--text-dark);
+            outline-offset: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            color: var(--text-lighter);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            html {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 36px 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+
+            .contact {
+                font-size: 12px;
+            }
+
+            .language-selector {
+                top: 16px;
+                right: 16px;
+                padding: 5px;
+                gap: 4px;
+            }
+
+            .lang-btn {
+                padding: 6px 11px;
+                font-size: 12px;
+            }
+
+            .icon {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 24px;
+            }
+
+            .badge {
+                padding: 5px 12px;
+                font-size: 10px;
+                margin-bottom: 24px;
+            }
+
+            .notify-btn {
+                padding: 11px 24px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .subtitle {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
+            }
+
+            .card {
+                background: #1f2937;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            h1 {
+                color: #f3f4f6;
+            }
+
+            .subtitle {
+                color: #d1d5db;
+            }
+
+            .contact {
+                color: #9ca3af;
+            }
+
+            .language-selector {
+                background: #1f2937;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .lang-btn {
+                color: #e5e7eb;
+            }
+
+            .lang-btn:hover {
+                background: #374151;
+            }
+
+            .lang-btn.active {
+                background: var(--primary-color);
+            }
+
+            .contact a {
+                color: #fbbf24;
+            }
+
+            .contact a:hover {
+                color: #fcd34d;
+            }
+
+            .footer {
+                border-top-color: #374151;
+                color: #6b7280;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: more) {
+            .lang-btn {
+                border: 1px solid var(--text-light);
+            }
+
+            .lang-btn.active {
+                border-color: var(--primary-dark);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector" role="group" aria-label="Language selection">
+        <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="ka" aria-label="ქართული (Georgian)">KA</button>
+        <button class="lang-btn" data-lang="ru" aria-label="Русский (Russian)">RU</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="badge" data-i18n="badge"></div>
+
+        <div class="card">
+            <!-- SVG Icon -->
+            <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Construction site illustration -->
+                <rect x="20" y="60" width="60" height="30" rx="2" fill="url(#gradient)"/>
+                <rect x="30" y="50" width="8" height="10" fill="url(#gradient)"/>
+                <rect x="62" y="50" width="8" height="10" fill="url(#gradient)"/>
+                <circle cx="35" cy="45" r="5" fill="url(#gradient)"/>
+                <circle cx="65" cy="45" r="5" fill="url(#gradient)"/>
+                <path d="M 40 35 L 50 20 L 60 35 Z" fill="url(#gradient)"/>
+                <line x1="50" y1="20" x2="50" y2="10" stroke="url(#gradient)" stroke-width="2"/>
+            </svg>
+
+            <h1 data-i18n="title"></h1>
+            <p class="subtitle" data-i18n="subtitle"></p>
+            <p class="contact" data-i18n="contact"></p>
+
+            <a href="mailto:info@georgiansteel.ge?subject=Website%20launch%20notification" class="notify-btn" data-i18n="button"></a>
+
+            <div class="footer" data-i18n="footer"></div>
+        </div>
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                badge: 'This website is currently under construction. Please check back soon.',
+                title: 'Under Construction',
+                subtitle: 'This website is currently under construction. Please check back soon.',
+                contact: 'Contact: <a href="mailto:info@georgiansteel.ge">info@georgiansteel.ge</a>',
+                button: 'Notify me',
+                footer: '© ' + new Date().getFullYear() + ' Georgian Steel'
+            },
+            ka: {
+                badge: 'ვებსაიტი ამჟამად მომზადების პროცესშია. გთხოვთ, მოგვიანებით ისევ გვეწვიეთ.',
+                title: 'საიტი მომზადების პროცესში',
+                subtitle: '',
+                contact: 'კონტაქტი: <a href="mailto:info@georgiansteel.ge">info@georgiansteel.ge</a>',
+                button: 'შემატყობინე',
+                footer: '© ' + new Date().getFullYear() + ' Georgian Steel'
+            },
+            ru: {
+                badge: 'Сайт сейчас в разработке. Пожалуйста, загляните позже.',
+                title: 'Сайт в разработке',
+                subtitle: 'Сайт сейчас в разработке. Пожалуйста, загляните позже.',
+                contact: 'Контакт: <a href="mailto:info@georgiansteel.ge">info@georgiansteel.ge</a>',
+                button: 'Сообщить мне',
+                footer: '© ' + new Date().getFullYear() + ' Georgian Steel'
+            }
+        };
+
+        // Get current language from localStorage or default to 'en'
+        function getCurrentLanguage() {
+            return localStorage.getItem('selectedLanguage') || 'en';
+        }
+
+        // Set HTML lang attribute and meta tags
+        function setHtmlLang(lang) {
+            document.documentElement.lang = lang;
+            updateMetaTags(lang);
+        }
+
+        // Update meta tags for SEO
+        function updateMetaTags(lang) {
+            const descriptions = {
+                en: 'Georgian Steel - Coming soon. Under construction.',
+                ka: 'Georgian Steel - მალე გამოვა. მომზადების პროცესში.',
+                ru: 'Georgian Steel - Скоро появится. Находится в разработке.'
+            };
+
+            const titles = {
+                en: 'Georgian Steel - Under Construction',
+                ka: 'Georgian Steel - მომზადების პროცესში',
+                ru: 'Georgian Steel - Сайт в разработке'
+            };
+
+            document.title = titles[lang] || titles['en'];
+            document.querySelector('meta[name="description"]').setAttribute('content', descriptions[lang] || descriptions['en']);
+        }
+
+        // Update all translatable elements
+        function updateLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = translations[lang][key];
+                if (text) {
+                    element.innerHTML = text;
+                }
+            });
+
+            // Update document language and meta tags
+            setHtmlLang(lang);
+        }
+
+        // Initialize language on page load
+        function initializeLanguage() {
+            const savedLang = getCurrentLanguage();
+            updateLanguage(savedLang);
+            updateActiveButton(savedLang);
+        }
+
+        // Update active button state
+        function updateActiveButton(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+        }
+
+        // Event listeners for language buttons
+        document.querySelectorAll('.lang-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                localStorage.setItem('selectedLanguage', lang);
+                updateLanguage(lang);
+                updateActiveButton(lang);
+            });
+
+            // Keyboard support (Enter and Space)
+            button.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initializeLanguage);
+
+        // Fallback if DOMContentLoaded already fired
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeLanguage);
+        } else {
+            initializeLanguage();
+        }
+    </script>
+</body>
+</html>
