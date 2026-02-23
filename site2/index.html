@@ -4,6 +4,7 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Georgian Steel – მაღალხარისხიანი რკინის კონსტრუქციები, ფოლადის პროდუქცია და სერვისები საქართველოში." />
     <title>GEORGIAN STEEL – მთავარი გვერდი</title>
     
     <!-- Favicon -->
@@ -21,217 +22,167 @@
 
     <!-- Custom CSS -->
     <style>
-        /* Base Styles */
+        :root {
+            --gs-primary: #F2A71B;
+            --gs-primary-dark: #FA6B00;
+            --gs-dark: #2d2d2d;
+            --gs-gray: #6b6b6b;
+            --gs-gray-bg: #e8e6e4;
+            --gs-card: #8a8a8a;
+            --gs-white: #fff;
+            --gs-shadow: 0 4px 20px rgba(242, 167, 27, 0.25);
+            --gs-shadow-hover: 0 8px 28px rgba(242, 167, 27, 0.35);
+            --gs-radius: 14px;
+            --gs-radius-lg: 1.5rem;
+            --gs-ease: cubic-bezier(0.33, 1, 0.68, 1);
+            --gs-transition: 0.25s var(--gs-ease);
+        }
+
         html, body {
             max-width: 100vw;
             overflow-x: hidden;
         }
-        
+
         body {
-            background-color: #e5e1e1;
-            color: #F2A71B;
-            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
+            background-color: var(--gs-gray-bg);
+            color: var(--gs-primary);
+            font-family: 'Sylfaen', 'BPG Glaho', 'Segoe UI', Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Typography - ერთიანი ფონტის სტილები */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Orbitron', 'Russo One', sans-serif;
             font-weight: 700;
-            color: #F2A71B;
-            letter-spacing: 1px;
+            color: var(--gs-primary);
+            letter-spacing: 0.02em;
         }
+        h1 { font-size: clamp(1.75rem, 4vw, 3rem); letter-spacing: 0.04em; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 2rem); }
+        h4 { font-size: 1.35rem; }
+        h5 { font-size: 1.15rem; }
+        h6 { font-size: 1rem; }
 
-        h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            letter-spacing: 1.5px;
-        }
-
-        h3 {
-            font-size: 2rem;
-            letter-spacing: 1px;
-        }
-
-        h4 {
-            font-size: 1.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        h5 {
-            font-size: 1.25rem;
-        }
-
-        h6 {
-            font-size: 1rem;
-        }
-
-        p {
-            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
+        p, .subtitle, .lead, .text-muted {
+            font-family: inherit;
             font-size: 1rem;
             line-height: 1.6;
-            color: #F2A71B;
+            color: var(--gs-primary);
         }
+        .subtitle, .lead { font-size: 1.05rem; }
 
-        /* ქვესათაურები */
-        .subtitle, .lead, .text-muted {
-            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.5;
-            color: #F2A71B;
-        }
-
-        /* Navbar Styles */
+        /* Navbar */
         .navbar, .bg-dark, footer.bg-dark {
-            background-color: #333333 !important;
+            background-color: var(--gs-dark) !important;
         }
 
         .navbar-brand {
             font-family: 'Orbitron', 'Russo One', sans-serif;
-            font-size: 3rem;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 12px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
-            color: #333333 !important;
-            text-transform: uppercase;
+            color: var(--gs-primary) !important;
         }
-
-        .navbar-informal {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.4rem;
-            color: #F2A71B !important;
-            letter-spacing: 2px;
-            text-shadow: 1px 2px 8px rgba(242, 167, 27, 0.5), 0 2px 2px #F2A71B;
-            padding: 0 0.2em;
-            background: none;
-            border: none;
+        .navbar-brand img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+            transition: opacity var(--gs-transition);
         }
+        .navbar-brand:hover img { opacity: 0.9; }
 
-        .navbar-kristen {
+        .navbar-informal, .navbar-kristen {
             font-family: 'Caveat', cursive;
-            font-size: 2.4rem;
-            color: #F2A71B !important;
-            letter-spacing: 2px;
-            text-shadow: 1px 2px 8px rgba(242, 167, 27, 0.5), 0 2px 2px #F2A71B;
+            font-size: 2.2rem;
+            color: var(--gs-primary) !important;
+            letter-spacing: 0.03em;
             padding: 0 0.2em;
             background: none;
             border: none;
         }
 
         .navbar-nav .nav-link {
-            color: #F2A71B !important;
+            color: var(--gs-primary) !important;
+            font-weight: 500;
+            transition: color var(--gs-transition);
         }
-
         .navbar-nav .nav-link.active {
-            color: #FA6B00 !important;
+            color: var(--gs-primary-dark) !important;
         }
-
         .navbar-nav .nav-link:hover {
-            color: #fff !important;
+            color: var(--gs-white) !important;
         }
-
         .navbar-nav.custom-left-space {
-            margin-left: 50px;
-            font-size: 1.1rem;
+            margin-left: 2.5rem;
+            font-size: 1.05rem;
         }
-        
         @media (min-width: 1200px) {
-            .navbar-nav.custom-left-space {
-                margin-left: 100px;
-            }
+            .navbar-nav.custom-left-space { margin-left: 4rem; }
         }
 
-        /* Hero Section */
-        .hero-title {
+        /* Hero / Banner */
+        #mainBanner h1 {
             font-family: 'Orbitron', 'Russo One', sans-serif;
-            font-size: 5rem;
-            letter-spacing: 6px;
-            text-shadow: 3px 3px 16px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
-            color: #F2A71B;
+            font-size: clamp(1.5rem, 4vw, 3.5rem);
+            letter-spacing: 0.06em;
+            color: var(--gs-white);
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 0 40px rgba(242, 167, 27, 0.3);
             text-transform: uppercase;
         }
-
-        .hero-bg {
-            background: url('https://via.placeholder.com/1920x600/000000/FF6B35?text=GEORGIAN+STEEL') center center/cover no-repeat;
-            height: 600px;
-            color: #F2A71B;
-        }
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            height: 100%;
+        #mainBanner p {
+            font-size: clamp(0.9rem, 1.5vw, 1.35rem);
+            color: var(--gs-primary);
+            text-shadow: 0 1px 8px rgba(0,0,0,0.4);
         }
 
         /* Buttons */
         .btn-primary, .btn-dark {
-            background-color: #FA6B00;
-            border-color: #F2A71B;
-            color: #fff;
+            background-color: var(--gs-primary-dark);
+            border-color: var(--gs-primary);
+            color: var(--gs-white);
+            transition: background var(--gs-transition), transform 0.2s var(--gs-ease);
         }
-
-        .btn-primary:hover, 
-        .btn-dark:hover {
-            background-color: #FA6B00;
-            border-color: #F2A71B;
-            color: #fff;
+        .btn-primary:hover, .btn-dark:hover {
+            background-color: #e55f00;
+            border-color: var(--gs-primary);
+            color: var(--gs-white);
+            transform: translateY(-1px);
         }
-
         .btn-outline-dark {
-            color: #F2A71B;
-            border-color: #F2A71B;
+            color: var(--gs-primary);
+            border-color: var(--gs-primary);
         }
-
         .btn-outline-dark:hover {
-            background-color: #FA6B00;
-            color: #fff;
-            border-color: #F2A71B;
+            background-color: var(--gs-primary-dark);
+            color: var(--gs-white);
+            border-color: var(--gs-primary);
         }
 
-        /* Social Buttons */
+        /* Social & Language */
         .social-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            transition: all 0.3s ease;
+            min-width: 44px;
+            min-height: 44px;
+            width: 44px;
+            height: 44px;
+            transition: transform var(--gs-transition);
             text-decoration: none;
             padding: 0;
             background: none;
             border: none;
+            color: var(--gs-primary);
         }
-
-        .social-btn:hover {
-            transform: translateY(-2px);
+        .social-btn:hover { transform: translateY(-2px); }
+        .social-btn:focus-visible {
+            outline: 2px solid var(--gs-primary);
+            outline-offset: 2px;
         }
-
-        .social-btn svg {
-            width: 24px;
-            height: 24px;
+        .language-option:focus-visible {
+            outline: 2px solid var(--gs-primary);
+            outline-offset: -2px;
         }
-
-        .social-btn[title="WhatsApp"] svg {
-            fill: #25D366;
-        }
-
-        .social-btn[title="Viber"]:hover {
-            color: #fff;
-        }
-
-        .social-btn[title="Telegram"]:hover {
-            color: #fff;
-        }
-
-        .social-btn[title="Twitter"]:hover {
-            color: #fff;
-        }
-
-        /* Language Menu */
-        .language-menu-container {
-            position: relative;
-            display: inline-block;
+        .nav-link:focus-visible {
+            outline: 2px solid var(--gs-primary);
+            outline-offset: 2px;
         }
 
         .language-dropdown {
@@ -240,15 +191,15 @@
             top: 100%;
             right: 0;
             margin-top: 8px;
-            background: #999999;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(242, 167, 27, 0.3);
+            background: var(--gs-card);
+            border-radius: var(--gs-radius);
+            box-shadow: var(--gs-shadow);
             min-width: 160px;
             z-index: 1000;
             overflow: hidden;
-            animation: slideDown 0.2s ease-out;
+            animation: slideDown 0.2s var(--gs-ease);
+            border: 1px solid rgba(242, 167, 27, 0.2);
         }
-
         .language-option {
             display: flex;
             align-items: center;
@@ -256,371 +207,286 @@
             padding: 12px 16px;
             border: none;
             background: none;
-            color: #F2A71B;
+            color: var(--gs-primary);
             font-size: 1rem;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: background 0.2s, color 0.2s;
         }
-
         .language-option:hover {
-            background-color: #333333;
-            color: #fff;
+            background-color: var(--gs-dark);
+            color: var(--gs-white);
         }
-
-        .language-option .flag {
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
+        .language-option .flag { margin-right: 10px; font-size: 1.2rem; }
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Feature Boxes */
+        /* Feature boxes */
         .feature-box {
             position: relative;
-            background-color: #999999;
-            border: 2px solid #F2A71B;
-            border-radius: 12px;
-            height: 250px;
+            background-color: var(--gs-card);
+            border: 2px solid var(--gs-primary);
+            border-radius: var(--gs-radius);
+            height: 240px;
             width: 100%;
-            padding: 20px;
-            font-size: 18px;
+            padding: 1.25rem;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: box-shadow var(--gs-transition), border-color var(--gs-transition), transform 0.2s var(--gs-ease);
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 17px;
+            margin-top: 1rem;
         }
-
         .feature-box:hover {
-            box-shadow: 0 5px 15px rgba(242, 167, 27, 0.4);
+            box-shadow: var(--gs-shadow-hover);
+            transform: translateY(-2px);
         }
 
-        .feature-title, 
-        .feature-desc {
+        .feature-title, .feature-desc {
             position: absolute;
             left: 0;
             width: 100%;
-            padding: 0 10px;
-            transition: opacity 0.3s ease;
+            padding: 0 1rem;
+            transition: opacity var(--gs-transition);
             z-index: 2;
-            font-weight: bold;
-            font-size: 16px;
-            color: #F2A71B;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--gs-primary);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
             text-align: center;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
-
-        .feature-title {
-            opacity: 1;
-        }
-
-        .feature-box:hover .feature-title {
-            opacity: 0;
-        }
-
-        .feature-desc {
-            opacity: 0;
-        }
-
-        .feature-box:hover .feature-desc {
-            opacity: 1;
-        }
-
+        .feature-title { opacity: 1; }
+        .feature-box:hover .feature-title { opacity: 0; }
+        .feature-desc { opacity: 0; }
+        .feature-box:hover .feature-desc { opacity: 1; }
         .overlay-img {
             position: absolute;
             width: 100%;
             left: 0;
             z-index: 1;
         }
-
-        .feature-title .overlay-img {
+        .feature-title .overlay-img, .feature-desc .overlay-img {
             top: 0;
-            opacity: 0.3;
+            opacity: 0.25;
         }
 
-        .feature-desc .overlay-img {
-            bottom: 0;
-            opacity: 0.3;
+        /* Text cards section */
+        .text-card {
+            padding: 2rem 1.75rem !important;
+            transition: box-shadow var(--gs-transition);
+        }
+        .text-card:hover {
+            box-shadow: var(--gs-shadow);
+        }
+
+        /* Partners */
+        #partnersCarousel .carousel-inner {
+            padding: 0.5rem 0;
         }
 
         /* Footer */
         .footer-salesforce {
-            background: linear-gradient(90deg, #333333 0%, #999999 100%);
-            border-top-left-radius: 2.5rem;
-            border-top-right-radius: 2.5rem;
-            box-shadow: 0 -4px 32px rgba(242, 167, 27, 0.2);
-            color: #F2A71B;
-            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, var(--gs-dark) 0%, var(--gs-gray) 100%);
+            border-top-left-radius: var(--gs-radius-lg);
+            border-top-right-radius: var(--gs-radius-lg);
+            box-shadow: 0 -6px 32px rgba(242, 167, 27, 0.15);
+            color: var(--gs-primary);
+            letter-spacing: 0.02em;
         }
-
         .footer-title {
-            font-size: 1.08rem;
+            font-size: 1rem;
             font-weight: 700;
-            color: #F2A71B;
-            margin-bottom: 0.7rem;
-            letter-spacing: 1px;
+            color: var(--gs-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-
         .footer-link {
-            color: #F2A71B !important;
+            color: var(--gs-primary) !important;
             text-decoration: none;
             transition: color 0.2s;
-            font-size: 1.05rem;
+            font-size: 1rem;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.35rem;
         }
-
         .footer-link:hover {
-            color: #fff !important;
+            color: var(--gs-white) !important;
             text-decoration: underline;
         }
-
-        .footer-help {
-            background: #999999;
-            box-shadow: 0 2px 12px rgba(242, 167, 27, 0.3);
-            color: #F2A71B;
-        }
-
         .social-icon {
-            color: #F2A71B;
-            font-size: 1.5rem;
+            color: var(--gs-primary);
+            font-size: 1.4rem;
             transition: color 0.2s;
         }
-
-        .social-icon:hover {
-            color: #fff;
-        }
-
-        .footer-location {
-            color: #F2A71B !important;
+        .social-icon:hover { color: var(--gs-white); }
+        .footer-location, .footer-brand {
+            color: var(--gs-primary) !important;
             transition: color 0.2s;
         }
-
-        .footer-location:hover {
-            color: #fff !important;
+        .footer-location:hover, .footer-brand:hover {
+            color: var(--gs-white) !important;
+        }
+        .footer-brand:hover { text-decoration: underline; }
+        .footer-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
         }
 
-        .footer-brand {
-            color: #F2A71B !important;
-            transition: color 0.2s;
-        }
-
-        .footer-brand:hover {
-            color: #fff !important;
-            text-decoration: underline;
-        }
-
-        /* Help Button */
+        /* Help button */
         #helpChatBtn {
             position: fixed;
-            bottom: 32px;
-            right: 32px;
+            bottom: 28px;
+            right: 28px;
             z-index: 5000;
-            background: linear-gradient(90deg, #FA6B00 0%, #FA6B00 100%);
-            color: #fff;
+            background: linear-gradient(135deg, var(--gs-primary-dark) 0%, #e55f00 100%);
+            color: var(--gs-white);
             border: none;
             border-radius: 50%;
-            box-shadow: 0 4px 24px rgba(242, 167, 27, 0.6);
-            width: 60px;
-            height: 60px;
+            box-shadow: var(--gs-shadow);
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: transform 0.2s var(--gs-ease), box-shadow var(--gs-transition);
+        }
+        #helpChatBtn:hover {
+            transform: scale(1.05);
+            box-shadow: var(--gs-shadow-hover);
+        }
+        #helpChatBtn:focus-visible {
+            outline: 2px solid var(--gs-primary);
+            outline-offset: 3px;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 991px) {
-            .footer-salesforce {
-                border-radius: 1.2rem 1.2rem 0 0;
-                padding-bottom: 1.5rem;
-            }
-            .footer-title {
-                font-size: 1rem;
-            }
-            .footer-help {
-                text-align: center;
-            }
-            .footer-contact {
-                text-align: center !important;
-                margin-top: 1.5rem;
-            }
-            .navbar-nav.custom-left-space {
-                margin-left: 0;
-            }
-            .navbar-brand img {
-                height: 50px !important;
-            }
-            .hero-title {
-                font-size: 2.5rem !important;
-            }
-            #mainBanner h1 {
-                font-size: 2rem !important;
-            }
-            #mainBanner p {
-                font-size: 1rem !important;
-            }
-            #mainBanner {
-                height: 280px !important;
-            }
-            .carousel-inner {
-                height: 250px !important;
-            }
+        /* Skip link (accessibility) */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            padding: 0.75rem 1.5rem;
+            background: var(--gs-primary-dark);
+            color: var(--gs-white);
+            font-weight: 600;
+            border-radius: var(--gs-radius);
+            text-decoration: none;
+            transition: top 0.2s var(--gs-ease);
+        }
+        .skip-link:focus {
+            top: 1rem;
+            outline: 2px solid var(--gs-primary);
+            outline-offset: 2px;
         }
 
-        @media (max-width: 767px) {
-            .navbar-brand img {
-                height: 40px !important;
+        /* Reduced motion (UX / WCAG) */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
-            .feature-box {
-                height: 200px;
-            }
-            .col-md-4 {
-                padding: 20px !important;
-            }
-            #mainBanner h1 {
-                font-size: 1.5rem !important;
-                letter-spacing: 2px !important;
-            }
-            #mainBanner p {
-                font-size: 0.9rem !important;
-            }
-            #mainBanner {
-                height: 220px !important;
-            }
-            .carousel-inner {
-                height: 200px !important;
-            }
+            .feature-box:hover { transform: none; }
+            .social-btn:hover { transform: none; }
+            #helpChatBtn:hover { transform: none; }
         }
 
-        @media (max-width: 575px) {
-            .navbar-brand img {
-                height: 35px !important;
-            }
-            #mainBanner h1 {
-                font-size: 1.2rem !important;
-            }
-            #mainBanner p {
-                font-size: 0.8rem !important;
-            }
-            #helpChatBtn {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-            }
-            #helpChatBtn i {
-                font-size: 1.4rem !important;
-            }
-            .feature-box {
-                height: 180px;
-                margin-top: 10px;
-            }
-            .feature-title, .feature-desc {
-                font-size: 14px;
-            }
-        }
-
-        /* Three text cards responsive */
-        @media (max-width: 767px) {
-            .container-fluid .row .col-md-4 {
-                padding: 25px !important;
-            }
-            .container-fluid .row .col-md-4 h4 {
-                font-size: 1.1rem !important;
-            }
-            .container-fluid .row .col-md-4 p {
-                font-size: 0.9rem !important;
-            }
-        }
-
-        /* Partners section responsive */
-        @media (max-width: 767px) {
-            #partnersCarousel .d-flex {
-                gap: 1rem !important;
-            }
-            #partnersCarousel div[style*="min-width:140px"] {
-                min-width: 100px !important;
-                padding: 0.8rem 1rem !important;
-            }
-            #partnersCarousel img {
-                max-height: 30px !important;
-                max-width: 80px !important;
-            }
-        }
-
-        /* Footer responsive */
-        @media (max-width: 575px) {
-            .footer-salesforce .row > div {
-                text-align: center !important;
-            }
-            .footer-salesforce a[style*="font-size: 2rem"] {
-                font-size: 1.4rem !important;
-                flex-direction: column;
-            }
-            .footer-contact {
-                text-align: center !important;
-            }
-        }
-
-        /* Navbar toggler custom styles */
+        /* Navbar toggler */
         .navbar-toggler {
-            border-color: #F2A71B;
+            border-color: var(--gs-primary);
             padding: 0.4rem 0.6rem;
         }
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 107, 53, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23F2A71B' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
         .navbar-toggler:focus {
-            box-shadow: 0 0 0 0.15rem rgba(242, 167, 27, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba(242, 167, 27, 0.3);
         }
 
-        /* Collapse menu styling */
+        /* Responsive */
         @media (max-width: 991px) {
-            .navbar-collapse {
-                background-color: #999999;
-                padding: 1rem;
-                border-radius: 0 0 12px 12px;
-                margin-top: 0.5rem;
+            .footer-salesforce {
+                border-radius: 1.25rem 1.25rem 0 0;
+                padding-bottom: 1.5rem;
             }
-            .navbar-nav {
-                gap: 0.5rem !important;
+            .navbar-nav.custom-left-space { margin-left: 0; }
+            .navbar-brand img { height: 48px !important; }
+            #mainBanner { height: 300px !important; }
+            .carousel-inner { height: 280px !important; }
+            .navbar-collapse {
+                background-color: var(--gs-card);
+                padding: 1rem;
+                border-radius: 0 0 var(--gs-radius) var(--gs-radius);
+                margin-top: 0.5rem;
             }
             .navbar-nav .nav-link {
                 padding: 0.5rem 1rem !important;
                 border-radius: 8px;
             }
             .navbar-nav .nav-link:hover {
-                color: #fff !important;
-                background-color: rgba(242, 167, 27, 0.1);
+                background-color: rgba(242, 167, 27, 0.12);
             }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand img { height: 42px !important; }
+            .feature-box { height: 200px; }
+            #mainBanner { height: 240px !important; }
+            .carousel-inner { height: 220px !important; }
+            .container-fluid .row .col-md-4 { padding: 1.5rem !important; }
+            .container-fluid .row .col-md-4 h4 { font-size: 1.15rem !important; }
+            #partnersCarousel .d-flex { gap: 0.75rem !important; }
+            #partnersCarousel div[style*="min-width:140px"] {
+                min-width: 100px !important;
+                padding: 0.75rem 1rem !important;
+            }
+            #partnersCarousel img {
+                max-height: 32px !important;
+                max-width: 90px !important;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .navbar-brand img { height: 38px !important; }
+            #mainBanner { height: 200px !important; }
+            .carousel-inner { height: 180px !important; }
+            #helpChatBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #helpChatBtn i { font-size: 1.35rem !important; }
+            .feature-box { height: 175px; margin-top: 0.75rem; }
+            .feature-title, .feature-desc { font-size: 0.85rem; }
+            .footer-salesforce .row > div { text-align: center !important; }
+            .footer-salesforce a[style*="font-size: 2rem"] {
+                font-size: 1.35rem !important;
+            }
+            .footer-contact { text-align: center !important; }
         }
     </style>
 </head>
 <body>
 
+<!-- Skip to main content (accessibility) -->
+<a href="#main-content" class="skip-link">გადასვლა მთავარ შინაარსზე</a>
+
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" role="navigation" aria-label="მთავარი ნავიგაცია">
   <div class="container-fluid px-3 px-lg-4">
     <!-- ლოგო -->
     <a class="navbar-brand navbar-kristen" href="#">
-      <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 70px; width: auto; object-fit: contain;">
+      <img src="img/MainLogo.png" alt="Georgian Steel logo">
     </a>
     
     <!-- Hamburger ღილაკი მობილურისთვის -->
@@ -641,19 +507,19 @@
       
       <!-- ენის შეცვლის ღილაკი -->
       <div class="language-menu-container ms-lg-3 mt-2 mt-lg-0">
-        <button onclick="toggleLanguageMenu()" class="social-btn" title="ენის შეცვლა">
+        <button onclick="toggleLanguageMenu()" class="social-btn" title="ენის შეცვლა" aria-label="ენის შეცვლა" aria-haspopup="true" aria-expanded="false" id="languageMenuButton">
           🌐
         </button>
-        <div id="languageMenu" class="language-dropdown">
-          <button onclick="setLanguage('ka')" class="language-option">
+        <div id="languageMenu" class="language-dropdown" role="menu" aria-labelledby="languageMenuButton">
+          <button onclick="setLanguage('ka')" class="language-option" role="menuitem">
             <span class="flag">🇬🇪</span>
             ქართული
           </button>
-          <button onclick="setLanguage('ru')" class="language-option">
+          <button onclick="setLanguage('ru')" class="language-option" role="menuitem">
             <span class="flag">🇷🇺</span>
             Русский
           </button>
-          <button onclick="setLanguage('ru')" class="language-option">
+          <button onclick="setLanguage('en')" class="language-option" role="menuitem">
             <span class="flag">EN</span>
             English
           </button>
@@ -664,10 +530,11 @@
 </nav>
 
 <!-- მენიუს ქვემოთ განთავსებული ბანერი ორი მოძრავი სურათით და ტექსტით ცენტრში -->
+<main id="main-content" tabindex="-1">
 <div id="mainBanner" class="w-100 d-flex justify-content-center align-items-center position-relative"
-     style="height: 400px; background: linear-gradient(90deg, #333333 0%, #999999 100%); overflow: hidden;">
+     style="height: 380px; background: linear-gradient(135deg, #2d2d2d 0%, #6b6b6b 100%); overflow: hidden;">
   <div id="bannerCarousel" class="carousel slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="3500" style="max-width: 100vw;">
-    <div class="carousel-inner shadow" style="height: 370px;">
+    <div class="carousel-inner shadow" style="height: 100%; min-height: 340px;">
       <div class="carousel-item active">
         <img src="img/baner1.jpg"
              class="d-block w-100 h-100" alt="ბანერი 1" style="object-fit: cover;">
@@ -680,12 +547,8 @@
   </div>
   <!-- ტექსტი ბანერის ცენტრში -->
   <div class="position-absolute top-50 start-50 translate-middle text-center w-100" style="z-index: 2;">
-    <h1 style="font-family: 'Orbitron', 'Russo One', sans-serif; font-size: 4rem; letter-spacing: 4px; color: #fff; text-shadow: 0 4px 24px rgba(242, 167, 27, 0.8), 0 2px 2px #000; text-transform: uppercase;">
-      GEORGIAN STEEL
-    </h1>
-    <p style="font-size: 1.5rem; color: #F2A71B; text-shadow: 0 2px 8px rgba(242, 167, 27, 0.6);">
-      მაღალხარისხიანი რკინის კონსტრუქციები
-    </p>
+    <h1>GEORGIAN STEEL</h1>
+    <p>მაღალხარისხიანი რკინის კონსტრუქციები</p>
   </div>
   <!-- მუქი ნახევრად გამჭვირვალე ფენა ტექსტის უკეთ გამოსაჩენად -->
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0, 0, 0, 0.4); z-index:1;"></div>
@@ -936,24 +799,24 @@
   <div class="row text-start g-0">
 
     <!-- ბარათი 1 -->
-    <div class="col-12 col-md-4 text-card" style="background-color: #999999; padding: 30px 25px; color: #F2A71B; border: 1px solid #F2A71B;">
-      <h4 style="font-weight: bold; color: #F2A71B;">წარმოება, რომელიც<br>სტანდარტებს ცვლის</h4>
+    <div class="col-12 col-md-4 text-card" style="background-color: var(--gs-card, #8a8a8a); color: var(--gs-primary); border: 1px solid var(--gs-primary);">
+      <h4>წარმოება, რომელიც<br>სტანდარტებს ცვლის</h4>
       <p style="margin-top: 20px;">
         „ქართული ფოლადი" იყენებს უახლეს ტექნოლოგიებს უმაღლესი ხარისხის ფოლადის შესაქმნელად. ჩვენი პროდუქცია აკმაყოფილებს როგორც ადგილობრივ, ისე საერთაშორისო მოთხოვნებს.
       </p>
     </div>
 
     <!-- ბარათი 2 -->
-    <div class="col-12 col-md-4 text-card" style="background-color: #999999; padding: 30px 25px; color: #F2A71B; border: 1px solid #F2A71B;">
-      <h4 style="font-weight: bold; color: #F2A71B;">პარტნიორობა, რომელიც<br>ზრდის შესაძლებლობებს</h4>
+    <div class="col-12 col-md-4 text-card" style="background-color: var(--gs-card, #8a8a8a); color: var(--gs-primary); border: 1px solid var(--gs-primary);">
+      <h4>პარტნიორობა, რომელიც<br>ზრდის შესაძლებლობებს</h4>
       <p style="margin-top: 20px;">
         ვთანამშრომლობთ სამშენებლო, ინფრასტრუქტურული და ინდუსტრიული სექტორის ლიდერებთან. ერთად ვქმნით სტაბილურ და ძლიერ პროექტებს.
       </p>
     </div>
 
     <!-- ბარათი 3 -->
-    <div class="col-12 col-md-4 text-card" style="background-color: #999999; padding: 30px 25px; color: #F2A71B; border: 1px solid #F2A71B;">
-      <h4 style="font-weight: bold; color: #F2A71B;">ხარისხი, რომელიც<br>გაგრძელებულ ნდობას ქმნის</h4>
+    <div class="col-12 col-md-4 text-card" style="background-color: var(--gs-card, #8a8a8a); color: var(--gs-primary); border: 1px solid var(--gs-primary);">
+      <h4>ხარისხი, რომელიც<br>გაგრძელებულ ნდობას ქმნის</h4>
       <p style="margin-top: 20px;">
         ხარისხი ჩვენი მთავარი ღირებულებაა. ყოველი დეტალი გადის მკაცრ კონტროლს, რათა ჩვენს მომხმარებლებს მივაწვდოთ მხოლოდ სანდო ფოლადი.
       </p>
@@ -965,9 +828,9 @@
 
 
 <!--  პარტნიორები  -->
-<section class="py-5" style="background: #999999; border-radius: 2rem; margin-bottom:2.5rem;">
+<section class="py-5" style="background: var(--gs-card, #8a8a8a); border-radius: var(--gs-radius-lg, 1.5rem); margin-bottom: 2.5rem;">
   <div class="container">
-    <h3 class="text-center mb-4" style="font-weight:700; color:#F2A71B;">ჩვენი პარტნიორები</h3>
+    <h3 class="text-center mb-4">ჩვენი პარტნიორები</h3>
 
     <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
@@ -1016,14 +879,15 @@
 
 
 
+</main>
 <!-- Footer -->
-<footer class="footer-salesforce pt-5 pb-3 mt-5">
+<footer class="footer-salesforce pt-5 pb-3 mt-5" role="contentinfo">
   <div class="container">
     <div class="row gy-4">
       <!-- ლოგო და ბრენდი -->
       <div class="col-12 col-lg-3 mb-4 mb-lg-0">
         <a href="index.html" class="d-inline-flex align-items-center text-black text-decoration-none mb-3" style="font-family: 'Orbitron', 'Russo One', sans-serif; font-size: 2rem; letter-spacing: 2px;">
-         <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 55px; width: auto; object-fit: contain;">
+         <img src="img/MainLogo.png" alt="Georgian Steel logo" class="footer-logo">
         </a>
         <div class="mt-4">
           <a href="https://wa.me/995000000000" target="_blank" class="me-2 social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
@@ -1081,28 +945,8 @@
 <!-- მოდალური ფანჯარა -->
 
 <!-- Floating Help Button -->
-<button id="helpChatBtn"
-  style="
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 5000;
-    background: linear-gradient(90deg, #FA6B00 0%, #FA6B00 100%);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 4px 24px rgba(242,167,27,0.6);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  "
-  title="ონლაინ დახმარება"
->
-  <i class="bi bi-chat-dots" style="font-size:1.8rem;"></i>
+<button id="helpChatBtn" type="button" title="ონლაინ დახმარება">
+  <i class="bi bi-chat-dots" style="font-size:1.65rem;"></i>
 </button>
 <div id="agentforceModal" style="display:none; position:fixed; z-index:6000; inset:0; background:rgba(74,74,74,0.9);">
   <div style="max-width: 370px; width: 95vw; background: #999999; border-radius: 1.5rem; box-shadow: 0 8px 32px rgba(242,167,27,0.5); position: absolute; bottom: 100px; right: 40px; padding: 0; overflow: hidden;">
@@ -1203,12 +1047,15 @@
 <script>
 function toggleLanguageMenu() {
   const menu = document.getElementById('languageMenu');
-  menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'block' : 'none';
+  const btn = document.getElementById('languageMenuButton');
+  const isOpen = menu.style.display === 'block';
+  menu.style.display = isOpen ? 'none' : 'block';
+  if (btn) btn.setAttribute('aria-expanded', !isOpen);
   
-  // დახურვა მენიუს გარეთ დაწკაპუნებისას
   document.addEventListener('click', function closeMenu(e) {
     if (!e.target.closest('.language-menu-container')) {
       menu.style.display = 'none';
+      if (btn) btn.setAttribute('aria-expanded', 'false');
       document.removeEventListener('click', closeMenu);
     }
   });
@@ -1216,15 +1063,16 @@ function toggleLanguageMenu() {
 
 function setLanguage(lang) {
   const menu = document.getElementById('languageMenu');
+  const btn = document.getElementById('languageMenuButton');
   menu.style.display = 'none';
+  if (btn) btn.setAttribute('aria-expanded', 'false');
   
-  // აქ შეგიძლიათ დაამატოთ ენის გადართვის ლოგიკა
   if (lang === 'ka') {
     alert('არჩეული ენა: ქართული');
-    // window.location.href = 'ka.html';
   } else if (lang === 'ru') {
     alert('არჩეული ენა: Русский');
-    // window.location.href = 'ru.html';
+  } else if (lang === 'en') {
+    alert('Selected language: English');
   }
 }
 </script>
