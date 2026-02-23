@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEORGIAN STEEL – მთავარი გვერდი</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234A90A4'/%3E%3Cpath d='M32 16v32M16 32h32' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Base Styles */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        body {
+            background-color: #333333;
+            color: #F2A71B;
+            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
+        }
+
+        /* Typography - ერთიანი ფონტის სტილები */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: 1.5px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #F2A71B;
+        }
+
+        /* ქვესათაურები */
+        .subtitle, .lead, .text-muted {
+            font-family: 'Sylfaen', 'BPG Glaho', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #F2A71B;
+        }
+
+        /* Navbar Styles */
+        .navbar, .bg-dark, footer.bg-dark {
+            background-color: #333333 !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 12px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
+            color: #333333 !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-informal {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.4rem;
+            color: #fff !important;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
+            padding: 0 0.2em;
+            background: none;
+            border: none;
+        }
+
+        .navbar-kristen {
+            font-family: 'Caveat', cursive;
+            font-size: 2.4rem;
+            color: #fff !important;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
+            padding: 0 0.2em;
+            background: none;
+            border: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: #F2A71B !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F2A71B !important;
+        }
+
+        .navbar-nav.custom-left-space {
+            margin-left: 50px;
+            font-size: 1.1rem;
+        }
+        
+        @media (min-width: 1200px) {
+            .navbar-nav.custom-left-space {
+                margin-left: 100px;
+            }
+        }
+
+        /* Hero Section */
+        .hero-title {
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-size: 5rem;
+            letter-spacing: 6px;
+            text-shadow: 3px 3px 16px rgba(242, 167, 27, 0.5), 0 2px 2px #FA6B00;
+            color: #F2A71B;
+            text-transform: uppercase;
+        }
+
+        .hero-bg {
+            background: url('https://via.placeholder.com/1920x600/4A4A4A/FF6B35?text=GEORGIAN+STEEL') center center/cover no-repeat;
+            height: 600px;
+            color: #F2A71B;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100%;
+        }
+
+        /* Buttons */
+        .btn-primary, .btn-dark {
+            background-color: #FA6B00;
+            border-color: #F2A71B;
+            color: #fff;
+        }
+
+        .btn-primary:hover, 
+        .btn-dark:hover {
+            background-color: #FA6B00;
+            border-color: #F2A71B;
+            color: #fff;
+        }
+
+        .btn-outline-dark {
+            color: #fff;
+            border-color: #F2A71B;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #FA6B00;
+            color: #fff;
+            border-color: #F2A71B;
+        }
+
+        /* Social Buttons */
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-btn[title="WhatsApp"] svg {
+            fill: #25D366;
+        }
+
+        .social-btn[title="Viber"]:hover {
+            color: #fff;
+        }
+
+        .social-btn[title="Telegram"]:hover {
+            color: #fff;
+        }
+
+        .social-btn[title="Twitter"]:hover {
+            color: #fff;
+        }
+
+        /* Language Menu */
+        .language-menu-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: #999999;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(242, 167, 27, 0.3);
+            min-width: 160px;
+            z-index: 1000;
+            overflow: hidden;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        .language-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            background: none;
+            color: #F2A71B;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .language-option:hover {
+            background-color: #333333;
+            color: #fff;
+        }
+
+        .language-option .flag {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Feature Boxes */
+        .feature-box {
+            position: relative;
+            background-color: #999999;
+            border: 2px solid #F2A71B;
+            border-radius: 12px;
+            height: 250px;
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 17px;
+        }
+
+        .feature-box:hover {
+            box-shadow: 0 5px 15px rgba(242, 167, 27, 0.4);
+        }
+
+        .feature-title, 
+        .feature-desc {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 0 10px;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            font-weight: bold;
+            font-size: 16px;
+            color: #F2A71B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .feature-title {
+            opacity: 1;
+        }
+
+        .feature-box:hover .feature-title {
+            opacity: 0;
+        }
+
+        .feature-desc {
+            opacity: 0;
+        }
+
+        .feature-box:hover .feature-desc {
+            opacity: 1;
+        }
+
+        .overlay-img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .feature-title .overlay-img {
+            top: 0;
+            opacity: 0.3;
+        }
+
+        .feature-desc .overlay-img {
+            bottom: 0;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        .footer-salesforce {
+            background: linear-gradient(90deg, #333333 0%, #999999 100%);
+            border-top-left-radius: 2.5rem;
+            border-top-right-radius: 2.5rem;
+            box-shadow: 0 -4px 32px rgba(242, 167, 27, 0.2);
+            color: #F2A71B;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-link {
+            color: #F2A71B !important;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-link:hover {
+            color: #fff !important;
+            text-decoration: underline;
+        }
+
+        .footer-help {
+            background: #999999;
+            box-shadow: 0 2px 12px rgba(242, 167, 27, 0.3);
+            color: #F2A71B;
+        }
+
+        .social-icon {
+            color: #F2A71B;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .social-icon:hover {
+            color: #fff;
+        }
+
+        .footer-location {
+            color: #F2A71B !important;
+            transition: color 0.2s;
+        }
+
+        .footer-location:hover {
+            color: #fff !important;
+        }
+
+        .footer-brand {
+            color: #F2A71B !important;
+            transition: color 0.2s;
+        }
+
+        .footer-brand:hover {
+            color: #fff !important;
+            text-decoration: underline;
+        }
+
+        /* Help Button */
+        #helpChatBtn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 5000;
+            background: linear-gradient(90deg, #FA6B00 0%, #FA6B00 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 24px rgba(242, 167, 27, 0.6);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .footer-salesforce {
+                border-radius: 1.2rem 1.2rem 0 0;
+                padding-bottom: 1.5rem;
+            }
+            .footer-title {
+                font-size: 1rem;
+            }
+            .footer-help {
+                text-align: center;
+            }
+            .footer-contact {
+                text-align: center !important;
+                margin-top: 1.5rem;
+            }
+            .navbar-nav.custom-left-space {
+                margin-left: 0;
+            }
+            .navbar-brand img {
+                height: 50px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand img {
+                height: 40px !important;
+            }
+            .cards-row {
+                gap: 20px !important;
+                padding: 0 15px;
+            }
+            .cards-row > div {
+                width: 100% !important;
+                max-width: 350px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .navbar-brand img {
+                height: 35px !important;
+            }
+            #helpChatBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #helpChatBtn i {
+                font-size: 1.4rem !important;
+            }
+            .cards-row {
+                margin-top: 25px !important;
+            }
+            .footer-salesforce .row > div {
+                text-align: center !important;
+            }
+            .footer-contact {
+                text-align: center !important;
+            }
+        }
+
+        /* Navbar toggler custom styles */
+        .navbar-toggler {
+            border-color: #F2A71B;
+            padding: 0.4rem 0.6rem;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 107, 53, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.15rem rgba(242, 167, 27, 0.25);
+        }
+
+        /* Collapse menu styling */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: #999999;
+                padding: 1rem;
+                border-radius: 0 0 12px 12px;
+                margin-top: 0.5rem;
+            }
+            .navbar-nav {
+                gap: 0.5rem !important;
+            }
+            .navbar-nav .nav-link {
+                padding: 0.5rem 1rem !important;
+                border-radius: 8px;
+            }
+            .navbar-nav .nav-link:hover {
+                color: #fff !important;
+                background-color: rgba(242, 167, 27, 0.1);
+            }
+        }
+
+        /* BoxList Styles */
+        .box {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* არ გამოიყენო min-height ან fixed height */
+        }
+
+        .box-content {
+            margin-top: 10px;
+            /* არ გამოიყენო min-height ან fixed height */
+        }
+
+        .cards-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    align-items: flex-start;
+  }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid px-3 px-lg-4">
+    <!-- ლოგო -->
+    <a class="navbar-brand navbar-kristen" href="#">
+      <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 70px; width: auto; object-fit: contain;">
+    </a>
+    
+    <!-- Hamburger ღილაკი მობილურისთვის -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- მენიუ და ენის ღილაკი -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-lg-3 custom-left-space">
+        <li class="nav-item"><a class="nav-link" href="index.html">მთავარი</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ჩვენს შესახებ</a></li>
+        <li class="nav-item"><a class="nav-link active" href="product.html">პროდუქცია</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">სერვისები</a></li>
+        <li class="nav-item"><a class="nav-link" href="galery.html">გალერია</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">კონტაქტი</a></li>
+      </ul>
+      
+      <!-- ენის შეცვლის ღილაკი -->
+      <div class="language-menu-container ms-lg-3 mt-2 mt-lg-0">
+        <button onclick="toggleLanguageMenu()" class="social-btn" title="ენის შეცვლა">
+          🌐
+        </button>
+        <div id="languageMenu" class="language-dropdown">
+          <button onclick="setLanguage('ka')" class="language-option">
+            <span class="flag">🇬🇪</span>
+            ქართული
+          </button>
+          <button onclick="setLanguage('ru')" class="language-option">
+            <span class="flag">🇷🇺</span>
+            Русский
+          </button>
+          <button onclick="setLanguage('en')" class="language-option">
+            <span class="flag">EN</span>
+            English
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- ზედა მხარეს გამოსახული საძიებო ველი -->
+<div id="searchBarOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; background:rgba(74,74,74,0.9); z-index:3000; padding-top:24px;">
+    <div style="max-width:700px; margin:auto; background:rgba(26,26,26,0.98); border-radius:2.5rem; box-shadow:0 8px 32px rgba(242,167,27,0.5); padding:1.2rem 2.5rem 1.2rem 2.5rem; display:flex; align-items:center; position:relative;">
+      <form id="overlaySearchForm" class="d-flex flex-grow-1" style="gap: 16px;">
+        <input class="form-control form-control-lg" type="search" placeholder="ძებნა..." style="font-size:1.2rem; border:2px solid #F2A71B; background:rgba(26,26,26,0.95); color:#F2A71B; box-shadow:0 2px 12px rgba(242,167,27,0.3); border-radius:2rem;">
+        <button type="submit" class="btn btn-primary btn-lg"
+          style="background:#FA6B00; border:none; min-width:110px; font-size:1.1rem; box-shadow:0 2px 8px rgba(242,167,27,0.4); border-radius: 2.7rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size:2.2rem; line-height:1;">🔍</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+
+<!-- ბარათები -->
+<div class="cards-row">
+
+  <!-- ბარათი 1: სტრატეგია -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/th.jpeg" alt="სტრატეგია" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('strategyDetails')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="strategyDetails" class="details-box">
+      <p style="margin: 0;">ჩვენი სტრატეგია ეფუძნება ინოვაციებს, ხარისხზე ორიენტირებას და გრძელვადიან პარტნიორობას. ჩვენ ვისწრაფვით ბაზარზე ლიდერობისკენ ტექნოლოგიური განვითარებისა და სოციალური პასუხისმგებლობის დახმარებით.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 2: ღირებულებები -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner2.jpeg" alt="ღირებულებები" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('valuesDetails')"
+       style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="valuesDetails" class="details-box">
+      <p style="margin: 0;">ჩვენთვის მნიშვნელოვანია პატივისცემა, სამართლიანობა, გამჭვირვალობა და პროფესიონალიზმი. ეს ღირებულებები განსაზღვრავს ჩვენს ყოველდღიურ საქმიანობასა და გადაწყვეტილებებს.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 3: ეთიკა -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner1.jpg" alt="ეთიკა" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('ethicsDetails')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="ethicsDetails" class="details-box">
+      <p style="margin: 0;">კორპორაციული ეთიკა და სოციალური პასუხისმგებლობა წარმოადგენს ჩვენს საქმიანობის განუყოფელ ნაწილს. ჩვენ ვზრუნავთ თანამშრომლებზე, გარემოზე და საზოგადოებაზე.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 4 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/th.jpeg" alt="ბოქსი 4" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box4Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box4Details" class="details-box">
+      <p style="margin: 0;">ეს არის მეოთხე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 5 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner2.jpeg" alt="ბოქსი 5" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box5Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box5Details" class="details-box">
+      <p style="margin: 0;">ეს არის მეხუთე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 6 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner1.jpg" alt="ბოქსი 6" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box6Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box6Details" class="details-box">
+      <p style="margin: 0;">ეს არის მეექვსე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 7 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/th.jpeg" alt="ბოქსი 7" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box7Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box7Details" class="details-box">
+      <p style="margin: 0;">ეს არის მეშვიდე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 8 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner2.jpeg" alt="ბოქსი 8" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box8Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box8Details" class="details-box">
+      <p style="margin: 0;">ეს არის მერვე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+
+  <!-- ბარათი 9 -->
+  <div style="width: 350px; box-shadow: 0 6px 16px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; background: white;">
+    <img src="img/baner1.jpg" alt="ბოქსი 9" style="width: 100%; height: auto;">
+    <div style="padding: 25px; text-align: center;">
+      <button onclick="toggleDetails('box9Details')" 
+      style="margin-top: 10px; background: none; border: none; color: #007BFF; font-size: 16px; cursor: pointer;">გაიგე მეტი →</button>
+    </div>
+    <div id="box9Details" class="details-box">
+      <p style="margin: 0;">ეს არის მეცხრე ბოქსის აღწერა. ტექსტი შეგიძლიათ შეცვალოთ სურვილისამებრ.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cards-row {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    align-items: flex-start;
+  }
+  .details-box {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    color: #333;
+    animation: fadeIn 0.4s ease;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(5px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+<script>
+  function toggleDetails(id) {
+    const current = document.getElementById(id);
+    const isOpen = current.style.display === 'block';
+    document.querySelectorAll('.details-box').forEach(function(box) {
+      box.style.display = 'none';
+    });
+    if (!isOpen) {
+      current.style.display = 'block';
+    }
+  }
+</script>
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="footer-salesforce pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row gy-4">
+       <!-- ლოგო და ბრენდი -->
+       <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+        <a href="index.html" class="d-inline-flex align-items-center text-black text-decoration-none mb-3" style="font-family: 'Orbitron', 'Russo One', sans-serif; font-size: 2rem; letter-spacing: 2px;">
+         <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 55px; width: auto; object-fit: contain;">
+        </a>
+          <div class="mt-4">
+            <a href="https://wa.me/995000000000" target="_blank" class="me-2 social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="viber://chat?number=995000000000" target="_blank" class="me-2 social-icon" title="Viber"><i class="bi bi-viber"></i></a>
+            <a href="https://t.me/yourusername" target="_blank" class="me-2 social-icon" title="Telegram"><i class="bi bi-telegram"></i></a>
+            <a href="mailto:info@georgiansteel.ge" class="me-2 social-icon" title="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+        <!-- მენიუები -->
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">კომპანია</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="footer-link">ჩვენს შესახებ</a></li>
+            <li><a href="products.html" class="footer-link">პროდუქცია</a></li>
+            <li><a href="services.html" class="footer-link">სერვისები</a></li>
+            <li><a href="contact.html" class="footer-link">კონტაქტი</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-title">რესურსები</h6>
+          <ul class="list-unstyled">
+            <li><a href="privacy.html" class="footer-link">კონფიდენციალურობა</a></li>
+            <li><a href="terms.html" class="footer-link">წესები და პირობები</a></li>
+            <li><a href="help.html" class="footer-link">კონტაქტები</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-5">
+          
+          <div class="footer-contact text-end text-lg-end text-center mt-3">
+            <div style="font-size: 1.1rem;">
+              
+              <a href="tel:+995000000000" class="footer-link bi bi-telephone-fill">+995 000 00 00 00</a>
+            </div>
+            <div>
+              <span class="me-2"><i class="bi bi-geo-alt-fill"></i></span>
+              <span class="footer-location">თბილისი, საქართველო</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color:rgba(242,167,27,0.3); margin: 2rem 0 1rem 0;">
+      <div class="row">
+        <div class="col-12 text-center" style="font-size: 1rem; color: #F2A71B;">
+          &copy; 2025 GEORGIAN STEEL – ყველა უფლება დაცულია.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  
+  <!-- მოდალური ფანჯარა -->
+  
+  <!-- Floating Help Button -->
+  <button id="helpChatBtn"
+    style="
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 5000;
+      background: linear-gradient(90deg, #5EC6E6 0%, #4A90A4 100%);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px #4A90A4aa;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    "
+    title="ონლაინ დახმარება"
+  >
+    <i class="bi bi-chat-dots" style="font-size:1.8rem;"></i>
+  </button>
+  <div id="agentforceModal" style="display:none; position:fixed; z-index:6000; inset:0; background:rgba(74,74,74,0.9);">
+    <div style="max-width: 370px; width: 95vw; background: #999999; border-radius: 1.5rem; box-shadow: 0 8px 32px rgba(242,167,27,0.5); position: absolute; bottom: 100px; right: 40px; padding: 0; overflow: hidden;">
+      <div style="background: linear-gradient(90deg, #FA6B00 0%, #FA6B00 100%); color: #fff; padding: 1.1rem 1.5rem 0.7rem 1.5rem;">
+        <div style="font-size: 1.15rem; font-weight: 700;">ონლაინ დახმარება</div>
+        <div style="font-size: 0.95rem; opacity: 0.85;">ჩვენი ასისტენტი მზადაა დაგეხმაროთ</div>
+      </div>
+      <div style="padding: 1.2rem 1.5rem 1rem 1.5rem;">
+        <div style="font-size: 1.05rem; color: #F2A71B; margin-bottom: 0.7rem;">
+          გამარჯობა! <b>GEORGIAN STEEL-ის</b> ონლაინ ასისტენტი გისმენთ.<br>
+          დაწერეთ თქვენი შეკითხვა ან აირჩიეთ ერთ-ერთი სწრაფი კითხვა:
+        </div>
+        <div class="d-grid gap-2 mb-3">
+          <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600; border-color:#F2A71B; color:#F2A71B;">როგორ შევუკვეთო პროდუქცია?</button>
+          <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600; border-color:#F2A71B; color:#F2A71B;">მჭირდება კონსულტაცია</button>
+          <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600; border-color:#F2A71B; color:#F2A71B;">ფასების ნახვა</button>
+        </div>
+        <input type="text" id="agentforceInput" class="form-control mb-2" placeholder="დაწერეთ თქვენი შეკითხვა..." style="border-radius:1.5rem; background:#333333; border-color:#F2A71B; color:#F2A71B;">
+        <button id="agentforceSendBtn" class="btn btn-primary w-100" style="border-radius:1.5rem; font-weight:600; background:#FA6B00; border-color:#F2A71B;">
+          გაგზავნა
+        </button>
+      </div>
+      <button id="agentforceClose" style="position:absolute; top:10px; right:18px; background:none; border:none; color:#F2A71B; font-size:1.7rem; font-weight:700; cursor:pointer;">&times;</button>
+    </div>
+  </div>
+  
+  <script>
+    // ღილაკზე დაჭერით მოდალის გამოჩენა
+    document.getElementById('helpChatBtn').onclick = function() {
+      document.getElementById('agentforceModal').style.display = 'block';
+    };
+    // დახურვა X-ზე ან ფონზე დაჭერით
+    document.getElementById('agentforceClose').onclick = function() {
+      document.getElementById('agentforceModal').style.display = 'none';
+    };
+    document.getElementById('agentforceModal').onclick = function(e) {
+      if (e.target === this) this.style.display = 'none';
+    };
+    // სწრაფი კითხვების ღილაკები
+    document.querySelectorAll('.quick-question').forEach(function(btn) {
+      btn.onclick = function() {
+        document.getElementById('agentforceInput').value = this.textContent;
+        document.getElementById('agentforceInput').focus();
+      };
+    });
+    // გაგზავნის ღილაკი
+    document.getElementById('agentforceSendBtn').onclick = function() {
+      const val = document.getElementById('agentforceInput').value.trim();
+      if(val) alert("თქვენი შეტყობინება: " + val + "\n(აქ შეგიძლია დაამატოთ ჩატის ლოგიკა)");
+    };
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('form[role="search"] input[type="search"]');
+      if (searchInput) {
+        searchInput.addEventListener('focus', function() {
+          document.getElementById('searchBarOverlay').style.display = 'block';
+          setTimeout(() => {
+            document.querySelector('#searchBarOverlay input[type="search"]').focus();
+          }, 100);
+        });
+      }
+      // ESC-ზე დახურვა
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.getElementById('searchBarOverlay').style.display = 'none';
+        }
+      });
+  
+      // ეკრანის ნებისმიერ ადგილას დაწკაპუნებით overlay დაიხუროს (input-ზე ან ღილაკზე დაწკაპუნების ჩათვლით)
+      document.addEventListener('mousedown', function(e) {
+        const overlay = document.getElementById('searchBarOverlay');
+        if (window.getComputedStyle(overlay).display === 'block') {
+          overlay.style.display = 'none';
+        }
+      });
+  
+      // overlay-ზე დაწკაპუნებისას (input-ზე ან ღილაკზე) overlay არ დაიხუროს
+      document.getElementById('searchBarOverlay').addEventListener('mousedown', function(e) {
+        e.stopPropagation();
+      });
+  
+      document.getElementById('overlaySearchForm').onsubmit = function(e) {
+        e.preventDefault();
+        const value = this.querySelector('input[type="search"]').value.trim();
+        if (value) {
+          alert('ძებნა: ' + value);
+        }
+      };
+  
+      document.getElementById('closeSearchBar').onclick = function() {
+        document.getElementById('searchBarOverlay').style.display = 'none';
+      };
+    });
+  </script>
+  
+  <script>
+  function toggleLanguageMenu() {
+    const menu = document.getElementById('languageMenu');
+    menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'block' : 'none';
+    
+    // დახურვა მენიუს გარეთ დაწკაპუნებისას
+    document.addEventListener('click', function closeMenu(e) {
+      if (!e.target.closest('.language-menu-container')) {
+        menu.style.display = 'none';
+        document.removeEventListener('click', closeMenu);
+      }
+    });
+  }
+  
+  function setLanguage(lang) {
+    const menu = document.getElementById('languageMenu');
+    menu.style.display = 'none';
+    
+    // აქ შეგიძლია დაამატოთ ენის გადართვის ლოგიკა
+    if (lang === 'ka') {
+      alert('არჩეული ენა: ქართული');
+      // window.location.href = 'ka.html';
+    } else if (lang === 'ru') {
+      alert('არჩეული ენა: Русский');
+      // window.location.href = 'ru.html';
+    }
+  }
+  </script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+  <script>
+    const { useState } = React;
+
+    const boxes = [
+      { id: 1, title: "ბოქსი 1", content: "დეტალური ინფორმაცია 1" },
+      { id: 2, title: "ბოქსი 2", content: "დეტალური ინფორმაცია 2" },
+      { id: 3, title: "ბოქსი 3", content: "დეტალური ინფორმაცია 3" },
+    ];
+
+    function App() {
+      const [openBoxId, setOpenBoxId] = useState(null);
+
+      return (
+        <div style={{ width: 320 }}>
+          {boxes.map((box) => (
+            <div
+              key={box.id}
+              style={{
+                border: "1px solid #ccc",
+                marginBottom: 10,
+                padding: 10,
+                boxSizing: "border-box",
+                background: "#fafafa",
+              }}
+            >
+              <h3 style={{ margin: 0 }}>{box.title}</h3>
+              <button onClick={() => setOpenBoxId(openBoxId === box.id ? null : box.id)}>
+                გაიგე მეტს
+              </button>
+              {openBoxId === box.id && (
+                <div style={{ marginTop: 10 }}>
+                  {box.content}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('boxListContainer'));
+  </script>
+  
+  <div id="boxListContainer"></div>
+  
+  </body>
+  </html>

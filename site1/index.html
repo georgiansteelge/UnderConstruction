@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEORGIAN STEEL – მთავარი გვერდი</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234A90A4'/%3E%3Cpath d='M32 16v32M16 32h32' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Base Styles */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        body {
+            background-color: #F8FBFF;
+            color: #2D3A4A;
+        }
+
+        /* Navbar Styles */
+        .navbar, .bg-dark, footer.bg-dark {
+            background-color: #F1F6FA !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 12px #bee9f7, 0 2px 2px #4A90A4;
+            color: #2D3A4A !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-informal {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.4rem;
+            color: #4A90A4 !important;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #bee9f7, 0 2px 2px #4A90A4;
+            padding: 0 0.2em;
+            background: none;
+            border: none;
+        }
+
+        .navbar-kristen {
+            font-family: 'Caveat', cursive;
+            font-size: 2.4rem;
+            color: #4A90A4 !important;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #bee9f7, 0 2px 2px #4A90A4;
+            padding: 0 0.2em;
+            background: none;
+            border: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: #4A90A4 !important;
+        }
+
+        .navbar-nav .nav-link.active, 
+        .navbar-nav .nav-link:hover {
+            color: #5EC6E6 !important;
+        }
+
+        .navbar-nav.custom-left-space {
+            margin-left: 50px;
+            font-size: 1.1rem;
+        }
+        
+        @media (min-width: 1200px) {
+            .navbar-nav.custom-left-space {
+                margin-left: 100px;
+            }
+        }
+
+        /* Hero Section */
+        .hero-title {
+            font-family: 'Orbitron', 'Russo One', sans-serif;
+            font-size: 5rem;
+            letter-spacing: 6px;
+            text-shadow: 3px 3px 16px #bee9f7, 0 2px 2px #4A90A4;
+            color: #2D3A4A;
+            text-transform: uppercase;
+        }
+
+        .hero-bg {
+            background: url('https://via.placeholder.com/1920x600/E3F6FC/2D3A4A?text=GEORGIAN+STEEL') center center/cover no-repeat;
+            height: 600px;
+            color: #2D3A4A;
+        }
+
+        .overlay {
+            background-color: rgba(174, 222, 244, 0.7);
+            height: 100%;
+        }
+
+        /* Buttons */
+        .btn-primary, .btn-dark {
+            background-color: #5EC6E6;
+            border-color: #5EC6E6;
+            color: #fff;
+        }
+
+        .btn-primary:hover, 
+        .btn-dark:hover {
+            background-color: #4A90A4;
+            border-color: #4A90A4;
+            color: #fff;
+        }
+
+        .btn-outline-dark {
+            color: #4A90A4;
+            border-color: #4A90A4;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #4A90A4;
+            color: #fff;
+            border-color: #4A90A4;
+        }
+
+        /* Social Buttons */
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-btn[title="WhatsApp"] svg {
+            fill: #25D366;
+        }
+
+        .social-btn[title="Viber"]:hover {
+            color: #7360F2;
+        }
+
+        .social-btn[title="Telegram"]:hover {
+            color: #229ED9;
+        }
+
+        .social-btn[title="Twitter"]:hover {
+            color: #1DA1F2;
+        }
+
+        /* Language Menu */
+        .language-menu-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .language-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(74, 144, 164, 0.15);
+            min-width: 160px;
+            z-index: 1000;
+            overflow: hidden;
+            animation: slideDown 0.2s ease-out;
+        }
+
+        .language-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            background: none;
+            color: #2D3A4A;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .language-option:hover {
+            background-color: #f1f6fa;
+            color: #4A90A4;
+        }
+
+        .language-option .flag {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Feature Boxes */
+        .feature-box {
+            position: relative;
+            background-color: rgb(197, 219, 238);
+            border: 2px solid #a5cbf0;
+            border-radius: 12px;
+            height: 250px;
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 17px;
+        }
+
+        .feature-box:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-title, 
+        .feature-desc {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 0 10px;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+            font-weight: bold;
+            font-size: 16px;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .feature-title {
+            opacity: 1;
+        }
+
+        .feature-box:hover .feature-title {
+            opacity: 0;
+        }
+
+        .feature-desc {
+            opacity: 0;
+        }
+
+        .feature-box:hover .feature-desc {
+            opacity: 1;
+        }
+
+        .overlay-img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            z-index: 1;
+        }
+
+        .feature-title .overlay-img {
+            top: 0;
+            opacity: 0.3;
+        }
+
+        .feature-desc .overlay-img {
+            bottom: 0;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        .footer-salesforce {
+            background: linear-gradient(90deg, #f1f6fa 0%, #e3f6fc 100%);
+            border-top-left-radius: 2.5rem;
+            border-top-right-radius: 2.5rem;
+            box-shadow: 0 -4px 32px #4A90A422;
+            color: #131414;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #131414;
+            margin-bottom: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-link {
+            color: #131414 !important;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-link:hover {
+            color: #5EC6E6 !important;
+            text-decoration: underline;
+        }
+
+        .footer-help {
+            background: #fff;
+            box-shadow: 0 2px 12px #4A90A455;
+            color: #2D3A4A;
+        }
+
+        .social-icon {
+            color: #131414;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .social-icon:hover {
+            color: #5EC6E6;
+        }
+
+        .footer-location {
+            color: #131414 !important;
+            transition: color 0.2s;
+        }
+
+        .footer-location:hover {
+            color: #5EC6E6 !important;
+        }
+
+        .footer-brand {
+            color: #131414 !important;
+            transition: color 0.2s;
+        }
+
+        .footer-brand:hover {
+            color: #5EC6E6 !important;
+            text-decoration: underline;
+        }
+
+        /* Help Button */
+        #helpChatBtn {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 5000;
+            background: linear-gradient(90deg, #5EC6E6 0%, #4A90A4 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 24px #4A90A4aa;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .footer-salesforce {
+                border-radius: 1.2rem 1.2rem 0 0;
+                padding-bottom: 1.5rem;
+            }
+            .footer-title {
+                font-size: 1rem;
+            }
+            .footer-help {
+                text-align: center;
+            }
+            .footer-contact {
+                text-align: center !important;
+                margin-top: 1.5rem;
+            }
+            .navbar-nav.custom-left-space {
+                margin-left: 0;
+            }
+            .navbar-brand img {
+                height: 50px !important;
+            }
+            .hero-title {
+                font-size: 2.5rem !important;
+            }
+            #mainBanner h1 {
+                font-size: 2rem !important;
+            }
+            #mainBanner p {
+                font-size: 1rem !important;
+            }
+            #mainBanner {
+                height: 280px !important;
+            }
+            .carousel-inner {
+                height: 250px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .navbar-brand img {
+                height: 40px !important;
+            }
+            .feature-box {
+                height: 200px;
+            }
+            .col-md-4 {
+                padding: 20px !important;
+            }
+            #mainBanner h1 {
+                font-size: 1.5rem !important;
+                letter-spacing: 2px !important;
+            }
+            #mainBanner p {
+                font-size: 0.9rem !important;
+            }
+            #mainBanner {
+                height: 220px !important;
+            }
+            .carousel-inner {
+                height: 200px !important;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .navbar-brand img {
+                height: 35px !important;
+            }
+            #mainBanner h1 {
+                font-size: 1.2rem !important;
+            }
+            #mainBanner p {
+                font-size: 0.8rem !important;
+            }
+            #helpChatBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #helpChatBtn i {
+                font-size: 1.4rem !important;
+            }
+            .feature-box {
+                height: 180px;
+                margin-top: 10px;
+            }
+            .feature-title, .feature-desc {
+                font-size: 14px;
+            }
+        }
+
+        /* Three text cards responsive */
+        @media (max-width: 767px) {
+            .container-fluid .row .col-md-4 {
+                padding: 25px !important;
+            }
+            .container-fluid .row .col-md-4 h4 {
+                font-size: 1.1rem !important;
+            }
+            .container-fluid .row .col-md-4 p {
+                font-size: 0.9rem !important;
+            }
+        }
+
+        /* Partners section responsive */
+        @media (max-width: 767px) {
+            #partnersCarousel .d-flex {
+                gap: 1rem !important;
+            }
+            #partnersCarousel div[style*="min-width:140px"] {
+                min-width: 100px !important;
+                padding: 0.8rem 1rem !important;
+            }
+            #partnersCarousel img {
+                max-height: 30px !important;
+                max-width: 80px !important;
+            }
+        }
+
+        /* Footer responsive */
+        @media (max-width: 575px) {
+            .footer-salesforce .row > div {
+                text-align: center !important;
+            }
+            .footer-salesforce a[style*="font-size: 2rem"] {
+                font-size: 1.4rem !important;
+                flex-direction: column;
+            }
+            .footer-contact {
+                text-align: center !important;
+            }
+        }
+
+        /* Navbar toggler custom styles */
+        .navbar-toggler {
+            border-color: #4A90A4;
+            padding: 0.4rem 0.6rem;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2874, 144, 164, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .navbar-toggler:focus {
+            box-shadow: 0 0 0 0.15rem rgba(74, 144, 164, 0.25);
+        }
+
+        /* Collapse menu styling */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background-color: #F1F6FA;
+                padding: 1rem;
+                border-radius: 0 0 12px 12px;
+                margin-top: 0.5rem;
+            }
+            .navbar-nav {
+                gap: 0.5rem !important;
+            }
+            .navbar-nav .nav-link {
+                padding: 0.5rem 1rem !important;
+                border-radius: 8px;
+            }
+            .navbar-nav .nav-link:hover {
+                background-color: rgba(94, 198, 230, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid px-3 px-lg-4">
+    <!-- ლოგო -->
+    <a class="navbar-brand navbar-kristen" href="#">
+      <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 70px; width: auto; object-fit: contain;">
+    </a>
+    
+    <!-- Hamburger ღილაკი მობილურისთვის -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- მენიუ და ენის ღილაკი -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 gap-lg-3 custom-left-space">
+        <li class="nav-item"><a class="nav-link active" href="index.html">მთავარი</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ჩვენს შესახებ</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">პროდუქცია</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">სერვისები</a></li>
+        <li class="nav-item"><a class="nav-link" href="galery.html">გალერია</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">კონტაქტი</a></li>
+      </ul>
+      
+      <!-- ენის შეცვლის ღილაკი -->
+      <div class="language-menu-container ms-lg-3 mt-2 mt-lg-0">
+        <button onclick="toggleLanguageMenu()" class="social-btn" title="ენის შეცვლა">
+          🌐
+        </button>
+        <div id="languageMenu" class="language-dropdown">
+          <button onclick="setLanguage('ka')" class="language-option">
+            <span class="flag">🇬🇪</span>
+            ქართული
+          </button>
+          <button onclick="setLanguage('ru')" class="language-option">
+            <span class="flag">🇷🇺</span>
+            Русский
+          </button>
+          <button onclick="setLanguage('ru')" class="language-option">
+            <span class="flag">EN</span>
+            English
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- მენიუს ქვემოთ განთავსებული ბანერი ორი მოძრავი სურათით და ტექსტით ცენტრში -->
+<div id="mainBanner" class="w-100 d-flex justify-content-center align-items-center position-relative"
+     style="height: 400px; background: linear-gradient(90deg, #e3f6fc 0%, #bee9f7 100%); overflow: hidden;">
+  <div id="bannerCarousel" class="carousel slide w-100 h-100" data-bs-ride="carousel" data-bs-interval="3500" style="max-width: 100vw;">
+    <div class="carousel-inner shadow" style="height: 370px;">
+      <div class="carousel-item active">
+        <img src="img/baner1.jpg"
+             class="d-block w-100 h-100" alt="ბანერი 1" style="object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="img/baner2.jpeg"
+             class="d-block w-100 h-100" alt="ბანერი 2" style="object-fit: cover;">
+      </div>
+    </div>
+  </div>
+  <!-- ტექსტი ბანერის ცენტრში -->
+  <div class="position-absolute top-50 start-50 translate-middle text-center w-100" style="z-index: 2;">
+    <h1 style="font-family: 'Orbitron', 'Russo One', sans-serif; font-size: 4rem; letter-spacing: 4px; color: #fff; text-shadow: 0 4px 24px #4A90A4, 0 2px 2px #2D3A4A; text-transform: uppercase;">
+      GEORGIAN STEEL
+    </h1>
+    <p style="font-size: 1.5rem; color: #fff; text-shadow: 0 2px 8px #4A90A4;">
+      მაღალხარისხიანი რკინის კონსტრუქციები
+    </p>
+  </div>
+  <!-- მუქი ნახევრად გამჭვირვალე ფენა ტექსტის უკეთ გამოსაჩენად -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(44, 62, 80, 0.28); z-index:1;"></div>
+</div>
+
+
+
+
+
+
+
+<!-- ზედა მხარეს გამოსახული საძიებო ველი -->
+<div id="searchBarOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; background:rgba(74,144,164,0.18); z-index:3000; padding-top:24px;">
+  <div style="max-width:700px; margin:auto; background:rgba(255,255,255,0.98); border-radius:2.5rem; box-shadow:0 8px 32px #4A90A4; padding:1.2rem 2.5rem 1.2rem 2.5rem; display:flex; align-items:center; position:relative;">
+    <form id="overlaySearchForm" class="d-flex flex-grow-1" style="gap: 16px;">
+      <input class="form-control form-control-lg" type="search" placeholder="ძებნა..." style="font-size:1.2rem; border:2px solid #4A90A4; background:rgba(255,255,255,0.95); box-shadow:0 2px 12px #b0bec5; border-radius:2rem;">
+      <button type="submit" class="btn btn-primary btn-lg"
+        style="background:#4A90A4; border:none; min-width:110px; font-size:1.1rem; box-shadow:0 2px 8px #b0bec5; border-radius: 2.7rem; display: flex; align-items: center; justify-content: center;">
+        <span style="font-size:2.2rem; line-height:1;">🔍</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+<!--  ბევრი სურათები  ზედა წარწერით და ქვემოთა  -->
+
+<div class="container py-4">
+  <div class="row g-3">
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          სანდოობა
+          <div class="overlay-img">
+            <img src="img/baner2.jpeg" alt="ზედა 1" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          ხარისხიანი მომსახურება და გამჭვირვალე პოლიტიკა.
+          <div class="overlay-img">
+            <img src="img/th.jpeg" alt="ქვედა 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          პროფესიონალიზმი
+          <div class="overlay-img">
+            <img src="images/top2.png" alt="ზედა 2" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          გამოცდილი გუნდი თქვენი მიზნების ასასრულებლად.
+          <div class="overlay-img">
+            <img src="images/bottom2.png" alt="ქვედა 2" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          ინოვაცია
+          <div class="overlay-img">
+            <img src="images/top3.png" alt="ზედა 3" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          ახალი ტექნოლოგიები და კრეატიული მიდგომები.
+          <div class="overlay-img">
+            <img src="images/bottom3.png" alt="ქვედა 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          ეფექტურობა
+          <div class="overlay-img">
+            <img src="images/top4.png" alt="ზედა 4" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          მაქსიმალური შედეგი მინიმალური რესურსებით.
+          <div class="overlay-img">
+            <img src="images/bottom4.png" alt="ქვედა 4" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          ინტერაქცია
+          <div class="overlay-img">
+            <img src="images/top5.png" alt="ზედა 5" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          კლიენტთან მუდმივი კომუნიკაცია და მხარდაჭერა.
+          <div class="overlay-img">
+            <img src="images/bottom5.png" alt="ქვედა 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          ხარისხი
+          <div class="overlay-img">
+            <img src="images/top6.png" alt="ზედა 6" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          პროდუქცია და სერვისი უმაღლესი სტანდარტებით.
+          <div class="overlay-img">
+            <img src="images/bottom6.png" alt="ქვედა 6" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          გუნდურობა
+          <div class="overlay-img">
+            <img src="images/top7.png" alt="ზედა 7" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          წარმატება გუნდური მუშაობით მიიღება.
+          <div class="overlay-img">
+            <img src="images/bottom7.png" alt="ქვედა 7" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          პასუხისმგებლობა
+          <div class="overlay-img">
+            <img src="images/top8.png" alt="ზედა 8" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          ვემსახურებით ყოველ მომხმარებელს ერთნაირი პასუხისმგებლობით.
+          <div class="overlay-img">
+            <img src="images/bottom8.png" alt="ქვედა 8" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          მოქნილობა
+          <div class="overlay-img">
+            <img src="images/top9.png" alt="ზედა 9" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          ადაპტირება მომხმარებლის მოთხოვნებზე.
+          <div class="overlay-img">
+            <img src="images/bottom9.png" alt="ქვედა 9" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          განვითარება
+          <div class="overlay-img">
+            <img src="images/top10.png" alt="ზედა 10" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          მუდმივი სიახლეები და პროფესიული ზრდა.
+          <div class="overlay-img">
+            <img src="images/bottom10.png" alt="ქვედა 10" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          მხარდაჭერა
+          <div class="overlay-img">
+            <img src="images/top11.png" alt="ზედა 11" />
+          </div>
+        </div>
+        <div class="feature-desc">
+         24/7 მომხმარებლის დახმარება.
+          <div class="overlay-img">
+            <img src="images/bottom11.png" alt="ქვედა 11" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-4 col-lg-3">
+      <div class="feature-box">
+        <div class="feature-title">
+          პროგრესი
+          <div class="overlay-img">
+            <img src="images/top12.png" alt="ზედა 12" />
+          </div>
+        </div>
+        <div class="feature-desc">
+          ჩვენი მიზანია მუდმივად წინსვლა.
+          <div class="overlay-img">
+            <img src="images/bottom12.png" alt="ქვედა 12" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- სამი ტექსტი   .........              -->
+
+<div class="container-fluid py-5">
+  <div class="row text-start g-0">
+
+    <!-- ბარათი 1 -->
+    <div class="col-12 col-md-4 text-card" style="background-color: #dbe9f4; padding: 30px 25px; color: black;">
+      <h4 style="font-weight: bold;">წარმოება, რომელიც<br>სტანდარტებს ცვლის</h4>
+      <p style="margin-top: 20px;">
+        „ქართული ფოლადი" იყენებს უახლეს ტექნოლოგიებს უმაღლესი ხარისხის ფოლადის შესაქმნელად. ჩვენი პროდუქცია აკმაყოფილებს როგორც ადგილობრივ, ისე საერთაშორისო მოთხოვნებს.
+      </p>
+    </div>
+
+    <!-- ბარათი 2 -->
+    <div class="col-12 col-md-4 text-card" style="background-color: #e6eef2; padding: 30px 25px; color: black;">
+      <h4 style="font-weight: bold;">პარტნიორობა, რომელიც<br>ზრდის შესაძლებლობებს</h4>
+      <p style="margin-top: 20px;">
+        ვთანამშრომლობთ სამშენებლო, ინფრასტრუქტურული და ინდუსტრიული სექტორის ლიდერებთან. ერთად ვქმნით სტაბილურ და ძლიერ პროექტებს.
+      </p>
+    </div>
+
+    <!-- ბარათი 3 -->
+    <div class="col-12 col-md-4 text-card" style="background-color: #cdd6dc; padding: 30px 25px; color: black;">
+      <h4 style="font-weight: bold;">ხარისხი, რომელიც<br>გაგრძელებულ ნდობას ქმნის</h4>
+      <p style="margin-top: 20px;">
+        ხარისხი ჩვენი მთავარი ღირებულებაა. ყოველი დეტალი გადის მკაცრ კონტროლს, რათა ჩვენს მომხმარებლებს მივაწვდოთ მხოლოდ სანდო ფოლადი.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!--  პარტნიორები  -->
+<section class="py-5" style="background: #f7fbfd; border-radius: 2rem; margin-bottom:2.5rem;">
+  <div class="container">
+    <h3 class="text-center mb-4" style="font-weight:700; color:#2D3A4A;">ჩვენი პარტნიორები</h3>
+
+    <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Unilever.svg" alt="Unilever" style="max-height:40px; max-width:120px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samsung_Logo.svg" alt="Samsung" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Coca-Cola_logo.svg" alt="Coca-Cola" style="max-height:40px; max-width:120px;">
+            </div>
+            <div style="background:#fff; border-radius:1.2rem; box-shadow:0 2px 12px #b0bec533; padding:1.2rem 2.2rem; display:flex; align-items:center; justify-content:center; min-width:140px; min-height:80px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.svg" alt="Adidas" style="max-height:40px; max-width:120px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--პარტნიორები დასასრული -->
+
+
+
+<!-- Footer -->
+<footer class="footer-salesforce pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- ლოგო და ბრენდი -->
+      <div class="col-12 col-lg-3 mb-4 mb-lg-0">
+        <a href="index.html" class="d-inline-flex align-items-center text-black text-decoration-none mb-3" style="font-family: 'Orbitron', 'Russo One', sans-serif; font-size: 2rem; letter-spacing: 2px;">
+         <img src="img/MainLogo.png" alt="georgian steel logo" style="height: 55px; width: auto; object-fit: contain;">
+        </a>
+        <div class="mt-4">
+          <a href="https://wa.me/995000000000" target="_blank" class="me-2 social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="viber://chat?number=995000000000" target="_blank" class="me-2 social-icon" title="Viber"><i class="bi bi-viber"></i></a>
+          <a href="https://t.me/yourusername" target="_blank" class="me-2 social-icon" title="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="mailto:info@georgiansteel.ge" class="me-2 social-icon" title="Email"><i class="bi bi-envelope"></i></a>
+        </div>
+      </div>
+      <!-- მენიუები -->
+      <div class="col-6 col-lg-2">
+        <h6 class="footer-title">კომპანია</h6>
+        <ul class="list-unstyled">
+          <li><a href="about.html" class="footer-link">ჩვენს შესახებ</a></li>
+          <li><a href="products.html" class="footer-link">პროდუქცია</a></li>
+          <li><a href="services.html" class="footer-link">სერვისები</a></li>
+          <li><a href="contact.html" class="footer-link">კონტაქტი</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="footer-title">რესურსები</h6>
+        <ul class="list-unstyled">
+          <li><a href="privacy.html" class="footer-link">კონფიდენციალურობა</a></li>
+          <li><a href="terms.html" class="footer-link">წესები და პირობები</a></li>
+          <li><a href="help.html" class="footer-link">კონტაქტები</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-5">
+        
+        <div class="footer-contact text-end text-lg-end text-center mt-3">
+          <div style="font-size: 1.1rem;">
+            
+            <a href="tel:+995000000000" class="footer-link bi bi-telephone-fill">+995 000 00 00 00</a>
+          </div>
+          <div>
+            <span class="me-2"><i class="bi bi-geo-alt-fill"></i></span>
+            <span class="footer-location">თბილისი, საქართველო</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="border-color:rgba(255,255,255,0.18); margin: 2rem 0 1rem 0;">
+    <div class="row">
+      <div class="col-12 text-center" style="font-size: 1rem; color: #131414;">
+        &copy; 2025 GEORGIAN STEEL – ყველა უფლება დაცულია.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- მოდალური ფანჯარა -->
+
+<!-- Floating Help Button -->
+<button id="helpChatBtn"
+  style="
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 5000;
+    background: linear-gradient(90deg, #5EC6E6 0%, #4A90A4 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px #4A90A4aa;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  "
+  title="ონლაინ დახმარება"
+>
+  <i class="bi bi-chat-dots" style="font-size:1.8rem;"></i>
+</button>
+<div id="agentforceModal" style="display:none; position:fixed; z-index:6000; inset:0; background:rgba(44,62,80,0.18);">
+  <div style="max-width: 370px; width: 95vw; background: #fff; border-radius: 1.5rem; box-shadow: 0 8px 32px #4A90A4aa; position: absolute; bottom: 100px; right: 40px; padding: 0; overflow: hidden;">
+    <div style="background: linear-gradient(90deg, #5EC6E6 0%, #4A90A4 100%); color: #fff; padding: 1.1rem 1.5rem 0.7rem 1.5rem;">
+      <div style="font-size: 1.15rem; font-weight: 700;">ონლაინ დახმარება</div>
+      <div style="font-size: 0.95rem; opacity: 0.85;">ჩვენი ასისტენტი მზადაა დაგეხმაროთ</div>
+    </div>
+    <div style="padding: 1.2rem 1.5rem 1rem 1.5rem;">
+      <div style="font-size: 1.05rem; color: #2D3A4A; margin-bottom: 0.7rem;">
+        გამარჯობა! <b>GEORGIAN STEEL-ის</b> ონლაინ ასისტენტი გისმენთ.<br>
+        დაწერეთ თქვენი შეკითხვა ან აირჩიეთ ერთ-ერთი სწრაფი კითხვა:
+      </div>
+      <div class="d-grid gap-2 mb-3">
+        <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600;">როგორ შევუკვეთო პროდუქცია?</button>
+        <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600;">მჭირდება კონსულტაცია</button>
+        <button class="btn btn-outline-primary w-100 quick-question" style="border-radius:1.5rem; font-weight:600;">ფასების ნახვა</button>
+      </div>
+      <input type="text" id="agentforceInput" class="form-control mb-2" placeholder="დაწერეთ თქვენი შეკითხვა..." style="border-radius:1.5rem;">
+      <button id="agentforceSendBtn" class="btn btn-primary w-100" style="border-radius:1.5rem; font-weight:600;">
+        გაგზავნა
+      </button>
+    </div>
+    <button id="agentforceClose" style="position:absolute; top:10px; right:18px; background:none; border:none; color:#4A90A4; font-size:1.7rem; font-weight:700; cursor:pointer;">&times;</button>
+  </div>
+</div>
+
+<script>
+  // ღილაკზე დაჭერით მოდალის გამოჩენა
+  document.getElementById('helpChatBtn').onclick = function() {
+    document.getElementById('agentforceModal').style.display = 'block';
+  };
+  // დახურვა X-ზე ან ფონზე დაჭერით
+  document.getElementById('agentforceClose').onclick = function() {
+    document.getElementById('agentforceModal').style.display = 'none';
+  };
+  document.getElementById('agentforceModal').onclick = function(e) {
+    if (e.target === this) this.style.display = 'none';
+  };
+  // სწრაფი კითხვების ღილაკები
+  document.querySelectorAll('.quick-question').forEach(function(btn) {
+    btn.onclick = function() {
+      document.getElementById('agentforceInput').value = this.textContent;
+      document.getElementById('agentforceInput').focus();
+    };
+  });
+  // გაგზავნის ღილაკი
+  document.getElementById('agentforceSendBtn').onclick = function() {
+    const val = document.getElementById('agentforceInput').value.trim();
+    if(val) alert("თქვენი შეტყობინება: " + val + "\n(აქ შეგიძლია დაამატოთ ჩატის ლოგიკა)");
+  };
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('form[role="search"] input[type="search"]');
+    if (searchInput) {
+      searchInput.addEventListener('focus', function() {
+        document.getElementById('searchBarOverlay').style.display = 'block';
+        setTimeout(() => {
+          document.querySelector('#searchBarOverlay input[type="search"]').focus();
+        }, 100);
+      });
+    }
+    // ESC-ზე დახურვა
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('searchBarOverlay').style.display = 'none';
+      }
+    });
+
+    // ეკრანის ნებისმიერ ადგილას დაწკაპუნებით overlay დაიხუროს (input-ზე ან ღილაკზე დაწკაპუნების ჩათვლით)
+    document.addEventListener('mousedown', function(e) {
+      const overlay = document.getElementById('searchBarOverlay');
+      if (window.getComputedStyle(overlay).display === 'block') {
+        overlay.style.display = 'none';
+      }
+    });
+
+    // overlay-ზე დაწკაპუნებისას (input-ზე ან ღილაკზე) overlay არ დაიხუროს
+    document.getElementById('searchBarOverlay').addEventListener('mousedown', function(e) {
+      e.stopPropagation();
+    });
+
+    document.getElementById('overlaySearchForm').onsubmit = function(e) {
+      e.preventDefault();
+      const value = this.querySelector('input[type="search"]').value.trim();
+      if (value) {
+        alert('ძებნა: ' + value);
+      }
+    };
+
+    document.getElementById('closeSearchBar').onclick = function() {
+      document.getElementById('searchBarOverlay').style.display = 'none';
+    };
+  });
+</script>
+
+<script>
+function toggleLanguageMenu() {
+  const menu = document.getElementById('languageMenu');
+  menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'block' : 'none';
+  
+  // დახურვა მენიუს გარეთ დაწკაპუნებისას
+  document.addEventListener('click', function closeMenu(e) {
+    if (!e.target.closest('.language-menu-container')) {
+      menu.style.display = 'none';
+      document.removeEventListener('click', closeMenu);
+    }
+  });
+}
+
+function setLanguage(lang) {
+  const menu = document.getElementById('languageMenu');
+  menu.style.display = 'none';
+  
+  // აქ შეგიძლიათ დაამატოთ ენის გადართვის ლოგიკა
+  if (lang === 'ka') {
+    alert('არჩეული ენა: ქართული');
+    // window.location.href = 'ka.html';
+  } else if (lang === 'ru') {
+    alert('არჩეული ენა: Русский');
+    // window.location.href = 'ru.html';
+  }
+}
+</script>
+
+
+
+</body>
+</html>
